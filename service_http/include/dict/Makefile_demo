@@ -1,0 +1,53 @@
+#
+# $Id: Makefile_demo,v 1.3 2009/07/15 07:04:36 scmpf Exp $
+# Description: Makefile of odict library
+# * Copyright (C) 2004 Baidu.com, Inc. All rights reserved
+# 
+
+GCC = g++
+
+WORKROOT=../../
+ifeq ($(MAC),64)
+	LIBPATH=$(WORKROOT)lib2-64
+else
+	LIBPATH=$(WORKROOT)lib2
+endif
+
+PUBLIC=$(WORKROOT)public
+INCLUDE = -I../include -I$(LIBPATH)/ullib/include -I$(LIBPATH)/dict/include -I$(PUBLIC)/odict/output/include
+
+CPPFLAGS = -g -finline-functions -Wall -Winline -pipe
+TLDFLAGS = -L$(PUBLIC)/odict/ -lodict -L$(LIBPATH)/ullib/lib/ -Loutput/lib/ --I$(PUBLIC)/odict/output/lib -lcrypto -luldict -lullib -lpthread
+
+TEST1 = test1 
+TEST2 = test2
+TEST3 = test3
+TEST0 = test0
+
+all: output target
+
+output: $(TEST0)
+
+target:
+	@echo ""
+
+clean:
+	rm -f *.o $(TEST0)
+
+$(TEST0) : main0.o
+	$(GCC) -o $@ $^ $(TLDFLAGS)
+	rm -rf $^
+$(TEST1) : main1.o
+	$(GCC) -o $@ $^ $(TLDFLAGS)
+	rm -rf $^
+
+$(TEST2) : main2.o 
+	$(GCC) -o $@ $^ $(TLDFLAGS)
+	rm -rf $^
+
+$(TEST3) : main3.o 
+	$(GCC) -o $@ $^ $(TLDFLAGS)
+	rm -rf $^
+
+%.o	: %.cpp
+	$(GCC) $(CPPFLAGS) -c $< -o $@ $(INCLUDE)

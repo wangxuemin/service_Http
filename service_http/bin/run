@@ -1,0 +1,6 @@
+#!/bin/sh
+cd $(dirname $0)
+#exec ./q_similar ../__https__ ../conf/qs_operator.conf 1> std.log 2> err.log 
+
+exec ./q_similar ../__https__ ../conf/crm.conf
+

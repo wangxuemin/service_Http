@@ -1,0 +1,4 @@
+test_sign.cpp是用来检测各种算法读取出的签名值
+case.list里面有一些url可以用来完成输出
+badcase20101026.list里面是用来区分20101026向ul_url_sign.cpp里面这个接口的测试url
+run_test.sh可以用来运行程序.

@@ -1,0 +1,7 @@
+3.1.11.1 dict 2010/07/08
+	* add 增加了murmurhash函数
+	* add 添加url签名的统一函数create_url_sign
+3.1.8.0  dict 2009/09/10
+	* fix:  ds_load载入数据采用分段读方式，规避内核限制
+3.1.5.0  dict 2007/11/07
+	* fix:  Makefile 支持-fPIC 
