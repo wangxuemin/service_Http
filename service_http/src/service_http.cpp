@@ -37,7 +37,7 @@ Json::Value conf;
 
 
 static int G_RS_MAX_CONF_NUM = 100;
-#define SUSVR_PATH "qs_operator.conf"
+#define SUSVR_PATH "service_http.conf"
 
 bool load_server_config(const string& file)
 {
@@ -103,8 +103,7 @@ typedef struct _conf_info_t
 static PendingPool g_pendingpool;
 static conf_info_t g_conf;
 static ul_logstat_t g_logstat;
-//-------------//
-//Similar m_sim;
+
 /***********new dict define begin here***********/
 
 
@@ -174,7 +173,7 @@ static int load_conf(char *home_path, conf_info_t &conf_info)
 	}
 	if (ul_getconfstr(pd_conf, "LOG_NAME", conf_info.log_name) == 0)
 	{
-		strcpy(conf_info.log_name, "qs.");
+		strcpy(conf_info.log_name, "service_http.");
 	}
 	if (ul_getconfint(pd_conf, "LOG_EVENTS", &(conf_info.log_events)) == 0)
 	{
@@ -549,7 +548,7 @@ void *server_thread(void *arg)
                     ++tquery;
                 }
             }
-            //m_sim.GetSim(s_q,json_result);
+            
 			json_result = s_q;
 			ul_writelog(UL_LOG_TRACE,"URI: %s\tRECOMM: %s",g_conn->uri,json_result.c_str());
 			strcpy(send_buf, json_result.c_str());
@@ -686,7 +685,7 @@ void show_help()
 	printf("\n");
         printf("Version\t: %s\n", VERSION);
         printf("\n");
-        printf("Usage: mysql_operator homepath [-v] [-h]\n");
+        printf("Usage: service_http homepath [-v] [-h]\n");
         printf("\t-h\tshow help\n");
         printf("\t-v\tshow version\n");
         printf("\n\n");
@@ -708,7 +707,7 @@ int main(int argc, char *argv[])
                 exit(0);
         }
 	*/
-    //m_sim.init();
+
 	signal(SIGPIPE, SIG_IGN);	
 	SDLOG_INIT("../conf/log4cxx.cfg");
 	if (load_conf(argv[1],g_conf)<0 || !load_server_config(argv[2])) {

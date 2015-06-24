@@ -1,0 +1,14 @@
+06-24 18:43:02:  service * 140697331480448 * Open process log by----service_http.
+=================================================
+NOTICE: 06-24 18:43:02:  service * 140697331480448 Service start
+06-24 18:43:02:  service * 140697301911296 * Open thread log by----service:server_thread
+================================================
+DEBUG: 06-24 18:43:10:  service * 140697331480448 accept connection succeed
+DEBUG: 06-24 18:43:10:  service * 140697331480448 Ready 1 sockets: handle 0(8), signal sent. 1 free threads
+DEBUG: 06-24 18:43:10:  service * 140697331480448 0 socket READY, 1 BUSY, 1 Total
+TRACE: 06-24 18:43:10:  service * 140697301911296 URI: /search?q=gegegwe%E5%A4%A7%E5%93%A5%E5%90%84%E4%BD%8D
+TRACE: 06-24 18:43:10:  service * 140697301911296 URI: /search?q=gegegwe%E5%A4%A7%E5%93%A5%E5%90%84%E4%BD%8D	RECOMM: gegegwe大哥各位
+DEBUG: 06-24 18:43:10:  service * 140697331480448 accept connection succeed
+DEBUG: 06-24 18:43:10:  service * 140697331480448 Ready 1 sockets: handle 0(8), signal sent. 1 free threads
+DEBUG: 06-24 18:43:10:  service * 140697331480448 0 socket READY, 1 BUSY, 1 Total
+TRACE: 06-24 18:43:10:  service * 140697301911296 URI: /favicon.ico
