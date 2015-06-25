@@ -47,7 +47,7 @@ LDFLAGS=-lstdc++ \
 		-lullib_ex \
 		-luldict -lutil -llog4cxx \
 		-lullib -lgcov  -ljson \
-		-lm -lpthread -liconv -laprutil-1 -lapr-1 -lexpat -lboost_system  -lboost_thread
+		-lm -lpthread -liconv -laprutil-1 -lapr-1 -lexpat 
 
 INCLUDES= -I./ \
 		  -I ../include/ullib/include \

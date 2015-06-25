@@ -21,12 +21,9 @@
 #include "utility.h"
 #include "sdlog.h"
 
-#include <boost/lexical_cast.hpp>
-
 #include <json/json.h>
 #include <json/value.h>
 #include <vector>
-#include <string>
 
 
 using namespace std;
