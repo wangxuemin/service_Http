@@ -25,3 +25,16 @@ TRACE: 06-25 13:21:35:  service * 139920281704192 URI: /search?q=gegegw	RECOMM: 
 DEBUG: 06-25 13:21:35:  service * 139920311273344 Ready 1 sockets: handle 1(9), signal sent. 1 free threads
 DEBUG: 06-25 13:21:35:  service * 139920311273344 0 socket READY, 1 BUSY, 2 Total
 TRACE: 06-25 13:21:35:  service * 139920281704192 URI: /favicon.ico
+06-25 14:40:31:  service * 140090850998144 * Open process log by----service_http.
+=================================================
+NOTICE: 06-25 14:40:31:  service * 140090850998144 Service start
+06-25 14:40:31:  service * 140090821428992 * Open thread log by----service:server_thread
+================================================
+DEBUG: 06-25 14:40:45:  service * 140090850998144 accept connection succeed
+DEBUG: 06-25 14:40:45:  service * 140090850998144 accept connection succeed
+DEBUG: 06-25 14:40:45:  service * 140090850998144 Ready 1 sockets: handle 0(8), signal sent. 1 free threads
+TRACE: 06-25 14:40:45:  service * 140090821428992 URI: /search?q=gegegw123456
+TRACE: 06-25 14:40:45:  service * 140090821428992 URI: /search?q=gegegw123456	RECOMM: gegegw123456
+DEBUG: 06-25 14:40:45:  service * 140090850998144 Ready 1 sockets: handle 1(9), signal sent. 1 free threads
+DEBUG: 06-25 14:40:45:  service * 140090850998144 0 socket READY, 1 BUSY, 2 Total
+TRACE: 06-25 14:40:45:  service * 140090821428992 URI: /favicon.ico

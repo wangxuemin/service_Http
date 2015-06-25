@@ -2,7 +2,7 @@
 
 /**
  * @file crm_correction.h
- * @author chenghengqi
+ * @author 
  * @brief  服务端头文件
  *  
  **/
@@ -48,7 +48,7 @@ const int G_SU_MAX_QUERY_LEN = 4096;
 const int STRATEGY_STATIC = 1;      ///<命中静态配置su
 const int STRATEGY_DAY = 2;         ///<天级sug覆盖
 const int STRATEGY_HOUR = 4;        ///<小时级sug覆盖
-typedef enum{TRANCHAR_TYPE_QUERY,TRANCHAR_TYPE_SUGQUERY};
-typedef enum{ACCONTS_DENY, ACCONTS_ALLOW};
+enum{TRANCHAR_TYPE_QUERY,TRANCHAR_TYPE_SUGQUERY};
+enum{ACCONTS_DENY, ACCONTS_ALLOW};
 #endif
 

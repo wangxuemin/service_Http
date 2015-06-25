@@ -6,13 +6,6 @@ lang=cn
 TARGETS=service_http
 CC=g++
 
-CONF_CONF_LIST:=$(addprefix shell/, $(CONF_CONF_LIST))
-EXTEND_LIST:=$(addprefix data/, $(EXTEND_LIST))
-SHELL_LIST:=./service_http ./start.sh ./stop.sh ./run
-PUB_CONF:=$(addprefix $(PUB_OUTPUT), $(PUB_CONF))
-WORD_CONF:=$(addprefix $(PUB_OUTPUT), $(WORD_CONF))
-WORD_CONF_NLP:=$(addprefix data/, $(WORD_CONF_NLP))
-DICT_NLP:=$(addprefix data/, $(DICT_NLP))
 
 THIRD_DIR:=../include/others-ex/lib/
 JSON_DIR:=$(THIRD_DIR)/jsoncpp/
@@ -40,7 +33,7 @@ LIBPATH=-L./ \
         -L ../include/others-ex/lib \
 		-L $(THIRD_DIR)/log4cxx/lib/ -L $(THIRD_DIR)/apr-util/lib/ \
 		-L $(JSON_DIR)/lib/ -L $(THIRD_DIR)/util/lib/ -L $(THIRD_DIR)/apr/lib/ \
-		-L $(WORD_SEG_DIR)/public/clib/lib  -L $(THIRD_DIR)/libiconv/lib \
+	    -L $(THIRD_DIR)/libiconv/lib \
 		-L /usr/local/lib/
 
 LDFLAGS=-lstdc++ \

@@ -8,3 +8,8 @@ WARNING: 06-24 18:43:10:  service * 140697301911296 parse uri  fail
 06-25 13:21:27:  service * 139920281704192 * Open thread log by----service:server_thread for wf
 ================================================
 WARNING: 06-25 13:21:35:  service * 139920281704192 parse uri  fail
+06-25 14:40:31:  service * 140090850998144 * Open process log by----service_http. for wf
+========================================================
+06-25 14:40:31:  service * 140090821428992 * Open thread log by----service:server_thread for wf
+================================================
+WARNING: 06-25 14:40:45:  service * 140090821428992 parse uri  fail

@@ -133,7 +133,7 @@ static int load_conf(char *home_path, conf_info_t &conf_info)
 	}
 	load_protocol_conf(pd_conf);
 	char tmpstr[G_SU_MAX_STR_LEN];
-	if(ul_getconfstr(pd_conf, "LOG_PATH", tmpstr))
+	if(ul_getconfstr(pd_conf, (char*)"LOG_PATH", tmpstr))
 	{
 		sprintf(conf_info.log_path, "%s/%s", conf_info.home_path, tmpstr);
 	}
@@ -141,7 +141,7 @@ static int load_conf(char *home_path, conf_info_t &conf_info)
 	{
 		sprintf(conf_info.log_path, "../%s", "log/");
 	}
-	if(ul_getconfstr(pd_conf, "INDEX_PATH", tmpstr))
+	if(ul_getconfstr(pd_conf,(char*)"INDEX_PATH", tmpstr))
 	{
 		sprintf(conf_info.index_path, "%s/%s", conf_info.home_path, tmpstr);
 	}
@@ -150,7 +150,7 @@ static int load_conf(char *home_path, conf_info_t &conf_info)
 		sprintf(conf_info.index_path, "../%s", "index/");
 	}
 
-	if(ul_getconfstr(pd_conf, "DATA_PATH", tmpstr))
+	if(ul_getconfstr(pd_conf, (char*)"DATA_PATH", tmpstr))
 	{
 		sprintf(conf_info.data_path, "%s/%s", conf_info.home_path, tmpstr);
 	}
@@ -159,7 +159,7 @@ static int load_conf(char *home_path, conf_info_t &conf_info)
 		sprintf(conf_info.data_path, "../%s", "data/");
 	}
 	
-	if(ul_getconfstr(pd_conf, "UTR_ENTRANCE", tmpstr))
+	if(ul_getconfstr(pd_conf, (char*)"UTR_ENTRANCE", tmpstr))
 	{
 		snprintf(conf_info.UTREntrance, G_SU_MAX_QUERY_LEN,"%s?",  tmpstr);
 		conf_info.UTREntrance[G_SU_MAX_QUERY_LEN - 1] = '\0';
@@ -168,68 +168,68 @@ static int load_conf(char *home_path, conf_info_t &conf_info)
 	{
 		sprintf(conf_info.UTREntrance, "%s?", "search");
 	}
-	if (ul_getconfstr(pd_conf, "LOG_NAME", conf_info.log_name) == 0)
+	if (ul_getconfstr(pd_conf, (char*)"LOG_NAME", conf_info.log_name) == 0)
 	{
 		strcpy(conf_info.log_name, "service_http.");
 	}
-	if (ul_getconfint(pd_conf, "LOG_EVENTS", &(conf_info.log_events)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"LOG_EVENTS", &(conf_info.log_events)) == 0)
 	{
 		conf_info.log_events = 0x10; //default : RSDEBUG
  	}
-	if (ul_getconfint(pd_conf, "LOG_TO_SYS", &(conf_info.log_to_sys)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"LOG_TO_SYS", &(conf_info.log_to_sys)) == 0)
 	{
 		conf_info.log_to_sys = 0;
 	}
-	if (ul_getconfint(pd_conf, "LOG_SPEC", &(conf_info.log_spec)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"LOG_SPEC", &(conf_info.log_spec)) == 0)
  	{
 		conf_info.log_spec = 0;
 	}
-	if (ul_getconfint(pd_conf, "PP_QUEUE_LEN", &(conf_info.pp_queue_len)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"PP_QUEUE_LEN", &(conf_info.pp_queue_len)) == 0)
 	{
 		conf_info.pp_queue_len = 6000;
 	}
-	if (ul_getconfint(pd_conf, "PP_SOCK_NUM", &(conf_info.pp_sock_num)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"PP_SOCK_NUM", &(conf_info.pp_sock_num)) == 0)
 	{
 		conf_info.pp_sock_num = 6000;
 	}
-	if (ul_getconfint(pd_conf, "PORT", &(conf_info.port)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"PORT", &(conf_info.port)) == 0)
 	{
 		conf_info.port = 6337; //port
 	}
-	if (ul_getconfint(pd_conf, "THREAD_NUM", &(conf_info.thread_num)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"THREAD_NUM", &(conf_info.thread_num)) == 0)
 	{
 		conf_info.thread_num = 1; //thread num
 	}
-	if (ul_getconfint(pd_conf, "VALIDTIME", &(conf_info.valid_time)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"VALIDTIME", &(conf_info.valid_time)) == 0)
 	{
 		conf_info.valid_time = 3600;
 	}
-	if (ul_getconfint(pd_conf, "LODERPORT", &(conf_info.loader_port)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"LODERPORT", &(conf_info.loader_port)) == 0)
 	{
 		conf_info.loader_port = 1106;
 	}
-	if (ul_getconfint(pd_conf, "MAX_INDEX_BUF_SIZE", &(conf_info.max_index_buf_size)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"MAX_INDEX_BUF_SIZE", &(conf_info.max_index_buf_size)) == 0)
 	{
 		conf_info.max_index_buf_size = 40000000;
 	}
-	if (ul_getconfint(pd_conf, "MAX_RESULT_NUM", &(conf_info.max_result_num)) == 0)
+	if (ul_getconfint(pd_conf,(char*)"MAX_RESULT_NUM", &(conf_info.max_result_num)) == 0)
 	{
 		conf_info.max_result_num = 20;
 	}
-	if (ul_getconfint(pd_conf, "DEFAULT_RESULT_NUM", &(conf_info.default_result_num)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"DEFAULT_RESULT_NUM", &(conf_info.default_result_num)) == 0)
 	{    
 		conf_info.default_result_num = 10;
 	} 
 	
-	if (ul_getconfint(pd_conf, "LOG_RANK", &(conf_info.log_rank)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"LOG_RANK", &(conf_info.log_rank)) == 0)
 	{
 		conf_info.log_rank = RANK_SUSVR_LOG;
 	}
-	if (ul_getconfint(pd_conf, "LOG_REFER_IP", &(conf_info.log_refer_ip)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"LOG_REFER_IP", &(conf_info.log_refer_ip)) == 0)
 	{    
 		conf_info.log_refer_ip = 0; 
 	}
-	if (ul_getconfint(pd_conf, "MAX_STATIC_NUM", &(conf_info.max_static_num)) == 0)
+	if (ul_getconfint(pd_conf, (char*)"MAX_STATIC_NUM", &(conf_info.max_static_num)) == 0)
 	{
 		conf_info.max_static_num = 10;
 	}
