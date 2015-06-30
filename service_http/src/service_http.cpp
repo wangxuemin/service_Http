@@ -114,7 +114,7 @@ static ul_logstat_t g_logstat;
  *  - 0     成功
  */
 
-static int load_conf(char *home_path, conf_info_t &conf_info)
+static int load_conf(char * home_path, conf_info_t &conf_info)
 {
 	strncpy(conf_info.home_path, home_path, G_SU_MAX_STR_LEN);
 	conf_info.home_path[G_SU_MAX_STR_LEN - 1] = 0;
@@ -170,7 +170,7 @@ static int load_conf(char *home_path, conf_info_t &conf_info)
 	}
 	if (ul_getconfstr(pd_conf, (char*)"LOG_NAME", conf_info.log_name) == 0)
 	{
-		strcpy(conf_info.log_name, "service_http.");
+		strcpy(conf_info.log_name, "new.");
 	}
 	if (ul_getconfint(pd_conf, (char*)"LOG_EVENTS", &(conf_info.log_events)) == 0)
 	{
@@ -481,6 +481,7 @@ void *server_thread(void *arg)
 	
 	
 	char expires_val[G_SU_MAX_STR_LEN];
+	char Time[G_SU_MAX_STR_LEN];
 	struct timeval s, e;
 	int time_used;
 	if (ul_openlog_r("server_thread", &g_logstat) == -1)
@@ -496,10 +497,33 @@ void *server_thread(void *arg)
 		bRun = false;
 	}	
 
+  // time_t start,end;
+  // start = time(NULL);
+  // std::cout << "start time:" << start <<std::endl;
 	while (bRun) {
-		// cout << "start in server_thread while" << endl;
+//		 cout << "start in server_ehread while" << endl;
 		try {
             
+/*			end = time(NULL);
+			if(difftime(end,start) > 10)
+			{
+				start = end;
+				std::cout << "end time:" <<  end << std::endl;
+				getexpire(expires_val);
+				std::cout << *expires_val << std::endl;
+				ul_closelog(0);
+				ul_closelog_r(0);
+				strcpy(g_conf.log_name,"newlog.");
+				if(ul_openlog(g_conf.log_path,g_conf.log_name,&g_logstat,1000) == -1) {
+					fprintf(stderr,"open log file error!\n");
+				}
+				
+			}
+			else
+			{
+				std::cout << "cou " <<  << std::endl;
+				
+			}*/
             char* tquery = NULL;
             std::string s_q = "";
             std::string json_result = "Hello World!";
@@ -707,6 +731,7 @@ int main(int argc, char *argv[])
 
 	signal(SIGPIPE, SIG_IGN);	
 	SDLOG_INIT("../conf/log4cxx.cfg");
+
 	if (load_conf(argv[1],g_conf)<0 || !load_server_config(argv[2])) {
 		fprintf(stderr,"load conf error\n");
 		return -1;
@@ -718,6 +743,10 @@ int main(int argc, char *argv[])
 		fprintf(stderr,"open log file error!\n");
 		return -1;
 	}
+/*	if(ul_openlog(g_conf.log_path,g_conf.log_name,&g_logstat,1000) == -1) {
+		fprintf(stderr,"open log file error!\n");
+		return -1;
+	}*/
 	
 	int ret = init();
 	if (ret < 0) {

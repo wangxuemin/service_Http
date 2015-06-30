@@ -1,0 +1,87 @@
+06-30 14:09:40:  new. * 140642499323776 * Open process log by----new. for wf
+========================================================
+06-30 14:09:40:  new. * 140642469754624 * Open thread log by----new.:server_thread for wf
+================================================
+WARNING: 06-30 14:09:50:  new. * 140642469754624 parse uri  fail
+06-30 15:13:37:  new. * 139812950902656 * Open process log by----new. for wf
+========================================================
+06-30 15:13:37:  new. * 139812921333504 * Open thread log by----new.:server_thread for wf
+================================================
+WARNING: 06-30 15:13:43:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:44:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:44:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:45:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:45:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:45:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:46:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:46:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:46:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:46:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:47:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:47:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:47:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:47:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:47:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:48:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:48:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:48:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:48:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:49:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:49:  new. * 139812921333504 parse uri  fail
+WARNING: 06-30 15:13:59:  new. * 139812921333504 [0]: get_request: client closed the connection
+WARNING: 06-30 15:13:59:  new. * 139812921333504 get request fail
+WARNING: 06-30 15:13:59:  new. * 139812921333504 [7]: protocol.c:write contents error:Broken pipe
+06-30 15:18:41:  new. * 140107113801600 * Open process log by----new. for wf
+========================================================
+06-30 15:18:41:  new. * 140107084232448 * Open thread log by----new.:server_thread for wf
+================================================
+WARNING: 06-30 15:19:00:  new. * 140107084232448 parse uri  fail
+WARNING: 06-30 15:19:10:  new. * 140107084232448 [0]: get_request: client closed the connection
+WARNING: 06-30 15:19:10:  new. * 140107084232448 get request fail
+WARNING: 06-30 15:19:10:  new. * 140107084232448 [7]: protocol.c:write contents error:Broken pipe
+WARNING: 06-30 15:19:25:  new. * 140107084232448 parse uri  fail
+06-30 15:22:32:  new. * 140241537259392 * Open process log by----new. for wf
+========================================================
+06-30 15:22:32:  new. * 140241507690240 * Open thread log by----new.:server_thread for wf
+================================================
+WARNING: 06-30 15:22:38:  new. * 140241507690240 parse uri  fail
+WARNING: 06-30 15:22:40:  new. * 140241507690240 parse uri  fail
+WARNING: 06-30 15:22:48:  new. * 140241507690240 parse uri  fail
+06-30 15:56:23:  new. * 140111987480448 * Open process log by----new. for wf
+========================================================
+06-30 15:56:23:  new. * 140111957911296 * Open thread log by----new.:server_thread for wf
+================================================
+06-30 15:56:24:  new. * 140111949518592 * Open thread log by----new.:server_thread for wf
+================================================
+06-30 15:56:25:  new. * 140111941125888 * Open thread log by----new.:server_thread for wf
+================================================
+06-30 15:56:26:  new. * 140111932733184 * Open thread log by----new.:server_thread for wf
+================================================
+06-30 15:56:27:  new. * 140111924340480 * Open thread log by----new.:server_thread for wf
+================================================
+06-30 15:56:28:  new. * 140111915947776 * Open thread log by----new.:server_thread for wf
+================================================
+06-30 15:56:29:  new. * 140111563978496 * Open thread log by----new.:server_thread for wf
+================================================
+06-30 15:56:30:  new. * 140111555585792 * Open thread log by----new.:server_thread for wf
+================================================
+06-30 15:56:31:  new. * 140111547193088 * Open thread log by----new.:server_thread for wf
+================================================
+06-30 15:56:32:  new. * 140111538800384 * Open thread log by----new.:server_thread for wf
+================================================
+WARNING: 06-30 15:56:38:  new. * 140111949518592 parse uri  fail
+WARNING: 06-30 15:56:48:  new. * 140111941125888 [0]: get_request: client closed the connection
+WARNING: 06-30 15:56:48:  new. * 140111941125888 get request fail
+WARNING: 06-30 15:56:48:  new. * 140111941125888 [7]: protocol.c:write contents error:Broken pipe
+WARNING: 06-30 15:57:06:  new. * 140111924340480 parse uri  fail
+WARNING: 06-30 15:57:16:  new. * 140111915947776 [0]: get_request: client closed the connection
+WARNING: 06-30 15:57:16:  new. * 140111915947776 get request fail
+WARNING: 06-30 15:57:16:  new. * 140111915947776 [7]: protocol.c:write contents error:Broken pipe
+06-30 16:30:04:  new. * 140049924491136 * Open process log by----new. for wf
+========================================================
+06-30 16:30:04:  new. * 140049894921984 * Open thread log by----new.:server_thread for wf
+================================================
+06-30 16:33:11:  new. * 140182449760128 * Open process log by----new. for wf
+========================================================
+06-30 16:33:11:  new. * 140182420190976 * Open thread log by----new.:server_thread for wf
+================================================
